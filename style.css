@@ -86,11 +86,15 @@ width: 112px;
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+    animation: slide-out .4s;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--hilight-color);
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+   animation: slide-in .4s forwards;
 }
 
 #switch span {
@@ -175,4 +179,24 @@ font-size: 24px;
 }
 #whatsapp-link {
     height: 80px;
+}
+
+/* animation */
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%
+    } 
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
